@@ -1,0 +1,72 @@
+@use "sass:color";
+
+/* Variables locales (opcional) */
+$bg-dark: #121212;
+$bg-hover: #333333;
+$accent: #1db954;
+
+.bottom-nav-wrapper {
+	position: fixed;
+	bottom: 1.5rem;
+	left: 0;
+	right: 0;
+	z-index: 40;
+	display: flex;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.bottom-nav {
+	background-color: $bg-dark;
+	border-radius: 32px;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+	border: 1px solid #292524;
+	gap: 0.5rem;
+	pointer-events: auto;
+
+	/* ¡Magia de SCSS: Anidamiento! */
+	.nav-button {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		overflow: hidden;
+		transition: all 0.5s ease-out;
+		border: none;
+		cursor: pointer;
+
+		&.active {
+			background-color: $accent;
+			color: black;
+			padding: 0.75rem 1.25rem;
+		}
+
+		&.inactive {
+			background-color: color.adjust($bg-dark, $lightness: 8%); /* Usando funciones de SASS */
+			color: #d6d3d1;
+			width: 3rem;
+			height: 3rem;
+			padding: 0;
+
+			&:hover {
+				background-color: $bg-hover;
+			}
+		}
+
+		/* Selector global anidado */
+		:global(.lucide) {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
+	}
+
+	.nav-label {
+		font-weight: 600;
+		font-size: 0.875rem;
+		white-space: nowrap;
+		margin-left: 0.5rem;
+	}
+}
