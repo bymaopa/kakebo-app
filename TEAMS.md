@@ -560,5 +560,34 @@ describe('formatCurrency', () => {
 
 ---
 
+```
+src/
+├── lib/
+│   │
+│   ├── core/                 	# 🧠 EL HEXÁGONO (Tu negocio, 100% puro)
+│   │   ├── domain/             #
+│	│	└── aplication/     	#
+│   │   └── infrastructure/     #
+│   │
+│   ├── ui/                     # 🎨 LA PRESENTACIÓN (Svelte y SASS)
+│   │   ├── components/         # navigation/, transactions/, ui/
+│   │   ├── styles/             # global.scss, variables.scss
+│   │   └── assets/             # SVGs, imágenes
+│   │
+│   └── shared/                 # 🔧 LO TRANSVERSAL (Opcional)
+│       ├── constants/          # Constantes genéricas
+│       └── state/              # Estado global (Runas)
+│
+├── routes/                     # 📺 LAS PANTALLAS (SvelteKit Routing)
+│   ├── (auth)/                 # Grupos lógicos (no afectan a la URL)
+│   │   └── login/
+│   │       └── +page.svelte
+│   ├── dashboard/
+│   │   └── +page.svelte        # La vista principal
+│   └── +layout.svelte          # El layout que envuelve toda la app
+│
+└── app.html                    # El esqueleto HTML base
+```
+
 _Última actualización: 2026-04-07_
 _Versión: 1.0_

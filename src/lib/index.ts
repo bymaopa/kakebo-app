@@ -6,9 +6,9 @@ import { LIST_MENU_NAVIGATION_MOBILE } from './constants/menu.const';
  */
 
 // Assets
-export { default as favicon } from './assets/favicon.svg';
+export { default as favicon } from './ui/assets/favicon.svg';
 
 // Constants
-export { LIST_MENU_NAVIGATION_MOBILE } from './constants/menu.const';
+export { LIST_MENU_NAVIGATION_MOBILE } from './shared/constants/menu.const';
 
 // Styles

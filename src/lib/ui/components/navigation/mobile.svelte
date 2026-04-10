@@ -30,13 +30,13 @@
 
 <script lang="ts">
 	// @ts-expect-error: SVG imports are handled by Vite but lack type definitions
-	import { LIST_MENU_NAVIGATION_MOBILE } from '$lib/constants/menu.const.ts';
+	import { LIST_MENU_NAVIGATION_MOBILE } from '$lib/shared/constants/menu.const.ts';
 	import { quintOut } from 'svelte/easing';
 
     import { slide } from 'svelte/transition';
 
     // Activa la opcion del menu
-    let { activeTab, navigateTo } = $props<{
+    let { activeTab = 'home', navigateTo } = $props<{
 		activeTab: string;
 		navigateTo: (id: string) => void;
 	}>();

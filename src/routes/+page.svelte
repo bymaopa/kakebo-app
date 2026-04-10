@@ -1,5 +1,5 @@
 <script lang="ts">
-    import NavMobileComponent from '@/components/navigation/mobile.svelte';
+    import NavMobileComponent from '$lib/ui/components/navigation/mobile.svelte';
 </script>
 
 <h1>Welcome to SvelteKit</h1>
