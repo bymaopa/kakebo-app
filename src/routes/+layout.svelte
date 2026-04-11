@@ -16,6 +16,11 @@
   });
 </script>
 
+<svelte:head>
+  <title>Añadir Gasto | Kakebo App</title>
+  <meta name="description" content="Registra un nuevo gasto en tu Kakebo personal de forma rápida y visual. Mantén tus finanzas bajo control." />
+</svelte:head>
+
 <div class="kakebo-layout">
   <DesktopNav />
 

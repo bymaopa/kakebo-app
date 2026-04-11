@@ -10,22 +10,21 @@
 
 <style lang="scss">
     .ambient-background {
-        /* inset: 0 es el equivalente CSS moderno a top:0, right:0, bottom:0, left:0 */
-        position: absolute;
-        inset: 0; 
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: 0;
+    position: absolute;
+    inset: 0; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     }
-        .noise-overlay {
-            position: absolute;
-            inset: 0;
-            background-image: url('../assets/noisy-background.jpg');
-            z-index: 0;
-            /* Aumentamos solo el contraste como indicaba tu clase contrast-120 */
-            filter: contrast(1.5) brightness(0.1) opacity(0.2); 
-        }
+    .noise-overlay {
+      position: absolute;
+      inset: 0;
+      /* Aquí inyectamos el SVG codificado en base64 para que pese 0 KB en red */
+      background-image: url('data:image/svg+xml,%3Csvg 22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');
+      mix-blend-mode: overlay;
+      z-index: 20;
+      filter: contrast(1.2); 
+    }
             .bg-shape-content {
                 height: auto;
                 width: auto;
