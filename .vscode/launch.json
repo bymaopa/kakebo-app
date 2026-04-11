@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "name": "Tauri Debug",
+      "request": "launch",
+      "command": "pnpm tauri dev",
+      "env": {
+        "RUST_LOG": "debug"
+      }
+    }
+  ]
+}
