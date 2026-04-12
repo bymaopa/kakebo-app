@@ -1,0 +1,39 @@
+/* src/lib/styles/variable.style.scss */
+
+/* 1. LA PALETA CRUDA (Tus colores exactos) */
+$c-olive: #8d9353;
+$c-dark: #1e1a1a;
+$c-white: #fffdfd;
+$c-peach: #dd9f72;
+$c-beige: #ede5d8;
+
+/* 2. VARIABLES CSS GLOBALES (Mapeo semántico) */
+/* Esto se inyecta en el :root para que Svelte pueda hacer el modo oscuro dinámico */
+:global(:root) {
+  /* Modo Claro por defecto */
+  --bg-base: #ffffff;
+  --bg-card: #e0e0e0;
+  --card-shape: #ffffff;
+  --text-base: #000;
+  --text-muted: rgba(30, 26, 26, 0.7); /* Mismo dark pero con opacidad */
+
+  --accent-primary: #{$c-olive};
+  --accent-secondary: #{$c-peach};
+
+  --border-color: rgba(30, 26, 26, 0.1);
+}
+
+:global([data-theme='dark']) {
+  /* Modo Oscuro */
+  --bg-base: #000000;
+  --bg-card: #000000;
+  --card-shape: #1f1f1f;
+  --text-base: #{$c-beige};
+  --text-muted: rgba(237, 229, 216, 0.6);
+
+  /* Los acentos normalmente se mantienen igual, ¡son la identidad de la marca! */
+  --accent-primary: #{$c-olive};
+  --accent-secondary: #{$c-peach};
+
+  --border-color: rgba(255, 253, 253, 0.1);
+}
