@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import { APP_LINKS } from '$lib/shared/constants/menu.const.ts';
+  import { page } from '$app/stores';
+  import { APP_LINKS } from '$lib/shared/constants/menu.const';
 
   let isExpanded = $state(false);
 
