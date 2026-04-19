@@ -7,6 +7,8 @@
   function toggleSidebar() {
     isExpanded = !isExpanded;
   }
+
+  let currentPath = $derived($page.url.pathname);
 </script>
 
 {#snippet hamburgerIcon()}
@@ -44,8 +46,8 @@
       <a
         href={link.href}
         class="nav-link"
-        class:active={page.url.pathname === link.href}
-        aria-current={page.url.pathname === link.href ? 'page' : undefined}
+        class:active={currentPath === link.href}
+        aria-current={currentPath === link.href ? 'page' : undefined}
       >
         <div class="icon-wrapper">
           {@html link.svg}
