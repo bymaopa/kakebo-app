@@ -1,16 +1,16 @@
 // src/lib/core/domain/transaction.type
 
-import { CategoryType } from './category.type';
+import type { CategoryType } from './category.type';
 
 export type TransactionType = 'income' | 'expense';
 
 export interface Transaction {
-    id: string;
-    type: TransactionType;
-    amount: number;
-    date: string;
-    category?: CategoryType;
-    description?: string;
-    tags?: string[];
-    learning?: string
+  id: string;
+  type: TransactionType;
+  amount: number;
+  date: string;
+  category?: CategoryType;
+  description?: string;
+  tags?: string[];
+  learning?: string;
 }
