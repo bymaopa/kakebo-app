@@ -78,7 +78,8 @@
     flex: 1;
     overflow: hidden;
     border-radius: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0px 15px -5px rgba(0, 0, 0, 0.2);
     will-change: transform;
     transition: all 0.3s ease;
 
