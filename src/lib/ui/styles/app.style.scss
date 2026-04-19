@@ -1,0 +1,29 @@
+/* src/lib/styles/app.scss */
+
+/* Importamos las variables y temas que acabamos de crear */
+@use './variable.style.scss';
+
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  /* Usamos las variables en lugar de colores fijos */
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Clases de utilidad globales que puedes usar en cualquier Svelte */
+:global(.text-primary) {
+  color: var(--accent-primary);
+}
+:global(.text-secondary) {
+  color: var(--accent-secondary);
+}

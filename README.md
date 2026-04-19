@@ -1,42 +1,76 @@
-# sv
+# Kakebo App
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+**Gestión de finanzas personales método Kakebo**
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## ¿Qué es Kakebo?
 
-```sh
-# create a new project
-npx sv create my-app
+Kakebo es un método japonés de gestión de finanzas personales. Se basa en registrar cada gasto y reflexionar sobre él,分为四个 categorías:
+
+- **Supervivencia**: Alimentación, vivienda, transporte, salud
+- **Ocio/Vicio**: Restaurantes, ropa no esencial, salidas
+- **Cultura**: Libros, cine, cursos, educación
+- **Extras**: Regalos, reparaciones, imprevistos
+
+---
+
+## Características
+
+- 📝 **Registro rápido** de ingresos y gastos
+- 📊 **Resumen mensual** con estadísticas
+- 📅 **Calendario visual** de gastos diarios
+- 📋 **Lista de movimientos** completa
+- 👤 **Perfil** con objetivos de ahorro
+- 💾 **Datos guardados** en tu ordenador
+
+---
+
+## Instalación
+
+### Desde código fuente
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/bymaopa/kakebo-app.git
+cd kakebo-app
+
+# Instalar dependencias
+pnpm install
+
+# Ejecutar en desarrollo
+pnpm dev
 ```
 
-To recreate this project with the same configuration:
+### Construir aplicación de escritorio
 
-```sh
-# recreate this project
-pnpm dlx sv@0.14.0 create --template minimal --types ts --add prettier eslint sveltekit-adapter="adapter:static" mdsvex devtools-json playwright --install pnpm kakebo-app
+```bash
+# Requiere Rust instalado
+pnpm tauri build
 ```
 
-## Developing
+El ejecutable se generará en `src-tauri/target/release/`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+---
 
-```sh
-npm run dev
+## Uso
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. **Añadir transacción**: Selecciona tipo (gasto/ingreso), introduce cantidad, descripción y categoría
+2. **Ver resumen**: Estadísticas del mes en curso
+3. **Calendario**: Visualización diaria de gastos
+4. **Movimientos**: Historial completo de transacciones
+5. **Perfil**: Configura tu objetivo de ahorro mensual
 
-## Building
+---
 
-To create a production version of your app:
+## Tecnologías
 
-```sh
-npm run build
-```
+- Svelte 5 + SvelteKit
+- Tauri 2 (Rust)
+- TypeScript
 
-You can preview the production build with `npm run preview`.
+---
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Licencia
+
+MIT
